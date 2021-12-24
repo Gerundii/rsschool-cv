@@ -2,10 +2,10 @@
 
 ### How to find me
 
-![Telegram](./tg12.png) [Gerundiiii](https://t.me/gerundiiii)  
-![Gmail](./gm12.png) [Gmail](mailto:m.tekuchev@gmail.com)  
-![Discord](./dc12.png) Gerundii#8255  
-![LinkedIn](./lk12.png) [LinkedIn](https://www.linkedin.com/in/mikhail-tekuchev-a3425119a/)
+![Telegram](./img/tg12.png) [Gerundiiii](https://t.me/gerundiiii)  
+![Gmail](./img/gm12.png) [Gmail](mailto:m.tekuchev@gmail.com)  
+![Discord](./img/dc12.png) Gerundii#8255  
+![LinkedIn](./img/lk12.png) [LinkedIn](https://www.linkedin.com/in/mikhail-tekuchev-a3425119a/)
 
 ***
 
@@ -49,9 +49,8 @@ nothing to say...
 
 - Volgograd State Technical University, Process engineer (mechanical engineering)
 - Courses:
-    - [Introduction to Linux](https://stepik.org/course/73/syllabus) - [Finished](Linux_intro_BIO.pdf)
-    <!-- - [Web Development for Beginners: HTML & CSS](https://stepik.org/course/38218/syllabus) -->
-    - [Software Testing Introduction (EPAM)](https://learn.epam.com/detailsPage?id=a4a1b6e2-4e51-455d-ac5b-e60f23d4ed69) - [Finished](stb_epam.pdf)
+    - [Introduction to Linux](https://stepik.org/course/73/syllabus) - [Finished](./files/Linux_intro_BIO.pdf)   
+    - [Software Testing Introduction (EPAM)](https://learn.epam.com/detailsPage?id=a4a1b6e2-4e51-455d-ac5b-e60f23d4ed69) - [Finished](./files/STB.pdf)
     - [Introduction to JavaScript (RS School)](https://rs.school/js-stage0/) - [In progress](https://app.rs.school/course/score?course=js-fe-preschool)    
 
 ***
@@ -63,4 +62,4 @@ nothing to say...
 
 ***
 
-## ![bear](bear_walk_circle_20.png) Gerundii 2021
+## ![bear](./img/bear_walk_circle_20.png) Gerundii 2021
