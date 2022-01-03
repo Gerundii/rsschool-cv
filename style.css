@@ -1,4 +1,516 @@
-div {
-    text-align: center;
-    background-color: aquamarine;
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins/Poppins-Medium.ttf");
+  font-weight: 500;
+ }
+
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins/Poppins-Bold.ttf");
+  font-weight: 700;
+ }
+
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins/Poppins-Light.ttf");
+  font-weight: 300;
+ }
+
+:root {
+  --vh-header: 50px;
+  --vh-main: 200px;
+  --vh-footer: 50px;
+  --wrap-padding: 10px;
+}
+
+* {
+  box-sizing: border-box;  
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+body, 
+h1, 
+h2 {      
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+.wrap {  
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--wrap-padding);
+  padding-right: var(--wrap-padding);  
+}
+
+.wrap-container {     
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  flex-basis: var(--vh-header);
+  background-color: #d7cca5;     
+}
+
+.nav {
+
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0 10px;
+}
+
+.nav-item {    
+  margin: 5px 5px;
+  padding: 5px 20px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  position: relative;
+  color: #000000;
+}
+
+.nav-link::before {
+  content: "";
+  bottom: -2px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  transition: 1s;
+  transform: scaleX(0)
+}
+
+.nav-link:hover::before{   
+  transform: scaleX(1)
+}
+
+.main {    
+  flex-basis: var(--vh-main);
+  flex-grow: 1;  
+}
+
+.main-container {
+  display: grid;
+  grid-template-areas: 
+    "photo    about   about"
+    "contact  exp     exp"
+    "skills   edu     edu"
+    "lang     proj    code"      
+  ;  
+  grid-template-columns: 1fr 1fr 1fr;  
+}
+
+.section {
+  padding: 10px;
+}
+
+.section-title {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.section-title-none {
+  display: none;
+}
+
+.photo {
+  grid-area: photo;  
+  margin: 0 auto;  
+  background-color: #ffffff;  
+}
+
+.about {
+  grid-area: about;
+  background-color: #2b464a;    
+}
+
+.about-name {  
+  font-size: 36px;
+  font-weight: 700;
+  color: #d7caa5;  
+}
+
+.about-subname {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  color: #dedfd8;    
+}
+
+.about-title {
+  color: #d7caa5; 
+}
+
+.about-text {
+  font-size: 16px;
+  font-weight: 300;
+  color: #dedfd8;  
+}
+
+.contact {
+  grid-area: contact;
+  background-color: #d7cca5;   
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list-item {
+  margin: 5px 0;  
+  padding: 10px 0 5px 40px;
+  position: relative;  
+}
+
+.contact-list-item:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 30px;
+  height: 30px;  
+  background-size: contain;    
+}
+
+.contact-list-item:nth-child(1):before {
+  background-image: url("assets/img/phone.svg");
+}
+
+.contact-list-item:nth-child(2):before {
+  background-image: url("assets/img/email.svg");
+}
+
+.contact-list-item:nth-child(3):before {
+  background-image: url("assets/img/github.svg");
+}
+
+.contact-list-item:nth-child(4):before {
+  background-image: url("assets/img/telegram.svg");
+}
+
+.contact-list-item:nth-child(5):before {
+  background-image: url("assets/img/discord.svg");
+}
+
+.contact-list-item:nth-child(6):before {
+  background-image: url("assets/img/location.svg");
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #000000;
+  transition: color 2s;  
+}
+
+.contact-link:hover {
+  color: #ffffff;
+}
+
+.exp {
+  grid-area: exp;
+  background-color: #dedfd8;
+}
+
+.exp-list {  
+  padding: 0 20px;
+}
+
+.exp-list-item {
+  margin: 10px 0;  
+  /* padding: 10px 0 5px 40px;    */
+}
+
+.edu {
+  grid-area: edu;
+  background-color: #2b464a;     
+}
+
+.edu-title {
+  color: #d7caa5; 
+}
+
+.edu-list {  
+  padding: 0 20px;
+}
+
+.edu-text {
+  font-size: 16px;
+  font-weight: 300;
+  color: #dedfd8;  
+}
+
+.edu-list-item {
+  margin: 0;  
+  padding: 0 0 10px 0;
+  position: relative;  
+}
+
+.edu-link {
+  text-decoration: none;
+  position: relative;
+  color: #dedfd8;    
+}
+
+.edu-link::before {
+  content: "";
+  bottom: -2px;
+  right: 0;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #dedfd8;
+  transition: 1s;  
+}
+
+.edu-link:hover::before{ 
+  left: 0; 
+  width: 100%;   
+}
+
+.skills {
+  grid-area: skills;
+  background-color: #2b464a;   
+}
+
+.skills-title {
+  color: #d7caa5; 
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list-item {
+  margin: 0px 0;  
+  padding: 5px 0 5px 40px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  color: #dedfd8;   
+}
+
+.skills-list-item:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 30px;
+  height: 30px;  
+  background-size: contain;    
+}
+
+.skills-list-item:nth-child(1):before {
+  background-image: url("assets/img/html.png");
+}
+
+.skills-list-item:nth-child(2):before {
+  background-image: url("assets/img/css.png");
+}
+
+.skills-list-item:nth-child(3):before {
+  background-image: url("assets/img/markdown.svg");
+}
+
+.skills-list-item:nth-child(4):before {
+  background-image: url("assets/img/git.png");
+}
+
+.skills-list-item:nth-child(5):before {
+  background-image: url("assets/img/gear.png");
+}
+
+.lang {
+  grid-area: lang;
+  background-color: #dedfd8;   
+}
+
+.lang-title {
+  color: #000000; 
+}
+
+.lang-list {  
+  padding: 0 20px;
+}
+
+.lang-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;  
+}
+
+.lang-list-item {
+  margin: 0;  
+  padding: 10px 0 10px 0;
+  position: relative;  
+}
+
+.code {
+  grid-area: code;
+  background-color: #dedfd8;   
+}
+
+.pre {
+  padding: 0;
+  margin: 0;
+}
+
+.proj {
+  grid-area: proj;
+  background-color: #dedfd8;   
+}
+
+.proj-title {
+  color: #000000; 
+}
+
+.proj-list {  
+  list-style: none;
+  padding: 0;
+}
+
+.proj-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;  
+}
+
+.proj-list-item {
+  margin: 0;  
+  padding: 10px 0 10px 40px;  
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;  
+}
+
+.proj-list-item:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 30px;
+  height: 30px;  
+  background-size: contain;    
+}
+
+.proj-list-item:nth-child(1):before {
+  background-image: url("assets/img/markdown.svg");
+}
+
+.proj-list-item:nth-child(2):before {
+  background-image: url("assets/img/html_css.png");
+}
+
+.proj-link {
+  text-decoration: none;
+  position: relative;
+  color: #000000;    
+}
+
+.proj-link::before {
+  content: "";
+  bottom: -2px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  transition: 1s;
+  transform: scaleX(0)
+}
+
+.proj-link:hover::before{   
+  transform: scaleX(1)
+}
+
+.footer {    
+  flex-basis: var(--vh-footer);
+  background-color: #d7cca5;
+  font-weight: 700;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-areas: 
+  "github year rsschool";
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.github {
+  grid-area: github;
+  justify-self: center;   
+  align-self: center;   
+}
+
+.year {
+  grid-area: year;
+  justify-self: center;  
+  align-self: center; 
+}
+
+.rsschool {
+  grid-area: rsschool;
+  justify-self: center;  
+  align-self: center; 
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #000000;
+  transition: color 2s;
+  position: relative;  
+  left: 40px;  
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.footer-link:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -40px;
+  width: 30px;
+  height: 30px;  
+  background-size: contain;    
+  background-image: url("assets/img/github.svg"); 
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    display: grid;
+    grid-template-areas: 
+      "photo"
+      "about"
+      "contact"  
+      "exp"
+      "skills"
+      "edu"
+      "lang"
+      "proj"
+      "code"      
+    ;  
+    grid-template-columns: 1fr;  
+  }
 }
